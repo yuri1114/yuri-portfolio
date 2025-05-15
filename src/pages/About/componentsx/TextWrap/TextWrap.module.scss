@@ -1,0 +1,12 @@
+.textWrap {
+  width: 100%;
+  padding: 0 1.875rem 1.875rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  p {
+    font-size: 1rem;
+  }
+}

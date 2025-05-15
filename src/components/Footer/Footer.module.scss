@@ -3,13 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.625rem 1.875rem;
+  padding: 0 1.875rem;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 5;
   .logo {
-    width: 8vw;
+    width: 6vw;
     height: auto;
     svg {
       width: 100%;

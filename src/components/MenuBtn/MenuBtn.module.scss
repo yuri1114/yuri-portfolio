@@ -1,3 +1,11 @@
 .menuBtn {
-  width: 10vw;
+  width: fit-content;
+  font-size: 1.6vw;
+  height: 3.125rem;
+  position: fixed;
+  top: 2vw;
+  left: 1.875rem;
+  &:hover {
+    cursor: pointer;
+  }
 }

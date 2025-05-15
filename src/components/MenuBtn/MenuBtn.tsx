@@ -1,8 +1,13 @@
-import React from "react";
 import styles from "./MenuBtn.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const MenuBtn = () => {
-  return <div className={styles.menuBtn}>MENU</div>;
+  const navigate = useNavigate();
+  return (
+    <div onClick={() => navigate("/menu")} className={styles.menuBtn}>
+      MENU
+    </div>
+  );
 };
 
 export default MenuBtn;
