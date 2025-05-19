@@ -15,7 +15,6 @@ const About = () => {
 
   return (
     <div className="commonLayout">
-      <MenuBtn />
       <div
         className={`${styles.layout} ${styles.roade} ${
           isRoade ? styles.active : ""

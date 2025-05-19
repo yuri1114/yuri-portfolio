@@ -1,0 +1,50 @@
+.item {
+  padding: 1.6vw 3vw;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 18px;
+
+  &:hover {
+    border: 1px solid var(--sub-border);
+  }
+}
+
+.topTitle {
+  padding-bottom: 1.875rem;
+  position: relative;
+  .projectTitle {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+
+  .number {
+    font-size: 3.75rem;
+    font-weight: 400;
+    position: absolute;
+    bottom: -2.8125rem;
+    right: 0.625rem;
+  }
+}
+
+.imgContainer {
+  width: 100%;
+  height: 38.15vh;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.bottomInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+
+  .skillTag {
+    min-width: 20%;
+    text-align: right;
+  }
+}
