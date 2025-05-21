@@ -1,12 +1,8 @@
 .item {
   padding: 1.6vw 3vw;
   height: 100%;
-  border: 1px solid transparent;
   border-radius: 18px;
-
-  &:hover {
-    border: 1px solid var(--sub-border);
-  }
+  border: 1px solid var(--sub-border);
 }
 
 .topTitle {
@@ -46,5 +42,11 @@
   .skillTag {
     min-width: 20%;
     text-align: right;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    padding: 20px;
   }
 }

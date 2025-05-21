@@ -13,3 +13,13 @@
   width: 100%;
   height: 70vh;
 }
+
+@media screen and (max-width: 768px) {
+  .layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 1.875rem;
+  }
+}
