@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./Footer.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.footer}>
-      <div className={styles.logo}>
+      <div className={styles.logo} onClick={() => navigate("/")}>
         <svg
           viewBox="0 0 242 123"
           fill="none"

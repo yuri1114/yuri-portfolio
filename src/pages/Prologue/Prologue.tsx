@@ -17,7 +17,10 @@ const Prologue = () => {
   };
 
   return (
-    <div className={`${styles.background} ${isLeaving ? styles.slideOut : ""}`}>
+    <div
+      onClick={goMenu}
+      className={`${styles.background} ${isLeaving ? styles.slideOut : ""}`}
+    >
       <div className={styles.textWrap}>
         <p className={styles.prologue}>PROLOGUE</p>
         <p className={styles.works} onClick={goMenu}>

@@ -5,6 +5,7 @@ import TextWrap from "./componentsx/TextWrap/TextWrap";
 import InfoItem from "./componentsx/InfoItem/InfoItem";
 import MenuBtn from "../../components/MenuBtn/MenuBtn";
 import { useEffect, useState } from "react";
+import Notion from "../../components/Notion/Notion";
 const About = () => {
   const [isRoade, setIsRoade] = useState(false);
 
@@ -44,6 +45,8 @@ const About = () => {
               어려운건 있어도 불가능한건 없다.
               <br />
               막혔을 땐 해결책을 찾아냅니다.
+              <br />
+              <Notion />
             </div>
 
             <div className={styles.rightImg}>

@@ -4,14 +4,13 @@
   --main-text-color: #fff;
   --main-border: #fff;
   --sub-border: #333333;
+  --logo-color: #ffffff;
 }
 
 [data-theme="light"] {
   --bg-color: #f9f9f9;
   --main-text-color: #121212;
   --main-border: #121212;
-  //   --text-color: #e0e0e0;
-  //   --main: #1d3bbc;
-  //   --sidebar-bg: #1a1a1a;
-  //   --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  --sub-border: #ccc;
+  --logo-color: #121212;
 }

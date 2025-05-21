@@ -1,0 +1,28 @@
+.notionBtn {
+  margin-top: 1.875rem;
+  border-bottom: 1px solid var(--main-border);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-border);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &:hover {
+    color: var(--main-border);
+    transform: translateY(-2px);
+  }
+}

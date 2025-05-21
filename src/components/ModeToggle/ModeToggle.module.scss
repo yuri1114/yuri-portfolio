@@ -1,0 +1,31 @@
+.toggleButton {
+  position: relative;
+  width: 3.75rem;
+  height: 1.875rem;
+  background-color: var(--sub-border);
+  border-radius: 30px;
+  border: 2px solid var(--main-border);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.1875rem;
+    width: 22px;
+    height: 22px;
+    background-color: var(--main-text-color);
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+
+  &[data-theme="light"]::before {
+    transform: translateX(30px);
+  }
+}

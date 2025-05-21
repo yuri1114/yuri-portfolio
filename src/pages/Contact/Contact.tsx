@@ -1,23 +1,34 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./Contact.module.scss";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSending, setIsSending] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    console.log("보낸 사람:", email);
-    console.log("제목:", subject);
-    console.log("내용:", message);
+    if (!formRef.current) return;
 
-    alert("메시지가 전송되었습니다.");
-
-    setEmail("");
-    setSubject("");
-    setMessage("");
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID!,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID!,
+        formRef.current!,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY!
+      )
+      .then(
+        () => {
+          alert("메시지가 성공적으로 전송되었습니다.");
+          formRef.current?.reset();
+        },
+        (error) => {
+          console.error("전송 실패:", error);
+          alert("전송 중 오류가 발생했습니다.");
+        }
+      )
+      .finally(() => setIsSending(false));
   };
   return (
     <div className={styles.flexPage}>
@@ -29,14 +40,13 @@ const Contact = () => {
 
       <div className={styles.emailContainer}>
         <p className={styles.subtitle}>Send email </p>
-        <form onSubmit={handleSubmit}>
+        <form ref={formRef} onSubmit={handleSubmit}>
           <div className={styles.mb}>
             <input
               type="email"
               required
               placeholder="보내는 사람 이메일을 적어주세요"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="user_email"
             />
           </div>
 
@@ -44,24 +54,22 @@ const Contact = () => {
             <input
               type="text"
               required
-              value={subject}
+              name="title"
               placeholder="제목을 적어주세요"
-              onChange={(e) => setSubject(e.target.value)}
             />
           </div>
 
           <div className={styles.mb}>
             <textarea
               required
-              rows={6}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="내용 적어주세요"
+              rows={10}
+              name="message"
+              placeholder="내용을 적어주세요"
             ></textarea>
           </div>
 
           <button type="submit" className={styles.sendBtn}>
-            보내기
+            {isSending ? "전송 중..." : "보내기"}
           </button>
         </form>
       </div>

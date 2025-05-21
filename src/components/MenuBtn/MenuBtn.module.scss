@@ -7,3 +7,15 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .menuBtn {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuBtn {
+    font-size: 1.875rem;
+  }
+}

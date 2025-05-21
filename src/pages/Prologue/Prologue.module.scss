@@ -87,3 +87,57 @@ img {
     transition: top 0.7s;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .background {
+    padding: 1.25rem 1.25rem 6.25rem;
+  }
+
+  .textWrap {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  .flower {
+    width: 50%;
+
+    left: 10vw;
+  }
+
+  .leaf {
+    width: 50%;
+
+    left: unset;
+  }
+
+  .bada {
+    width: 50%;
+
+    left: unset;
+  }
+
+  .dog {
+    border-radius: 50%;
+    width: 30vw;
+    height: 30vw;
+    left: 40vw;
+    top: 70vh;
+  }
+
+  .works {
+    cursor: pointer;
+    position: static;
+    text-align: center;
+    font-size: 3.75rem;
+  }
+
+  .prologue {
+    position: static;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
